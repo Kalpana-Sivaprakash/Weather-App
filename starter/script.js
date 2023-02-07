@@ -4,9 +4,34 @@ $(document).ready(function () {
 
     // the below code will cget the city co-ordinates
     $( "#search-form" ).submit(function( event ) {
-        let city = $("#search-input").val();
-        
+        let city = $("#search-input").val().trim();
         console.log(city);
+
+        if (city==""){
+          console.log("error", "city name cannot be blank");}
+
+        const cityname = [];
+        $("#search-input").empty();
+        
+        for (var i = 0; i < cityname.length; i++) {
+
+          var a = $("#search-input");
+
+          a.addClass(cityname);
+          a.attr("data-name", cityname[i]);
+          a.text(cityname[i]);
+          $("#search-input").append(a);
+        
+        }
+
+        //localStorage.setItem("city", city);
+
+       // var name = localStorage.getItem("city");
+        //city = name;
+        
+
+     
+ 
         var qryLocationURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + appkey;
         
         $.ajax({
@@ -16,7 +41,7 @@ $(document).ready(function () {
             GetWeather(response);
         });
         event.preventDefault();
-      });
+      }); 
 
 
       function GetWeather(response){
@@ -57,13 +82,15 @@ $(document).ready(function () {
                     $('#forecast').append(htmlStr);
                     dt.setDate(dt.getDate()+1);
                 }
+
+     
+
                 
               }
 
           });
 
       }
-
 
 
 
