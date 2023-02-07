@@ -5,7 +5,7 @@ weather forecast
  Created an app that will allows users to see the weather forecast for cities of their choosing. Have used Ajax to call third party weather API to get the weather details.
 
  # Deployed Link:
-
+https://kalpana-sivaprakash.github.io/module-08-challenge/
 
 
 # Repository Link:
@@ -18,8 +18,7 @@ N/A
 ## Usage 
 This app is used to retrieve weather data of cities for 5 days. 
 
-![screenshot]
-![screenshot]
+![screenshot](./assets/Output.PNG)
 
 
 ## Credits
