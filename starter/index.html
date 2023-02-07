@@ -19,36 +19,62 @@
   <!-- max-width for ultra wide resolutions -->
   <div class="container-fluid" style="max-width: 1400px">
     <div class="row">
-      <aside class="col-sm-3 pb-3">
-        <h2 id="form-heading" class="mt-1 h3 form-label">
-          Search for a City:
-        </h2>
-        <form id="search-form" class="form">
-          <div class="form-inline form-group">
-            <div class="input-group">
-              <input class="form-input weather-search" type="text" id="search-input" placeholder="London"
-                aria-labelledby="form-heading" aria-controls="today forecast" />
-              <div class="input-group-append">
-                <button type="submit" class="btn search-button" id="search-button" aria-label="submit search">
-                  Search
-                </button>
-                <hr class="hr weather-hr" />
-              </div>
+        <aside class="col-sm-3 pb-3">
+            <h2 id="form-heading" class="mt-1 h3 form-label">
+                Search for a City:
+            </h2>
+            <form id="search-form" class="form">
+                <div class="form-inline form-group">
+                    <div class="input-group">
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <input class="col-sm-12 mt-3 form-input weather-search" type="text" id="search-input" placeholder="Enter Full City Name"
+                                       aria-labelledby="form-heading" aria-controls="today forecast" />
+                                <button type="submit" class="col-sm-12 mt-3 btn btn-primary" id="search-button" aria-label="submit search">
+                                    Search
+                                </button>
+
+                                <button type="button" class="col-sm-12 mt-3 btn btn-light " id="clearHistory">
+                                    Clear History
+                                </button>
+
+                                <hr class="hr weather-hr" />
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+                </div>
+            </form>
+           
+            <div class="list-group" id="history"></div>
+            <div id="city-history">
+
             </div>
-          </div>
-        </form>
-        <div class="list-group" id="history"></div>
-      </aside>
+        </aside>
 
       <div class="col-sm-9 pb-3">
         <section id="today" class="mt-3" role="region" aria-live="polite">
-          
+         
         </section>
-        <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
+          <p class="text-dark mt-3"><b>5-Day Forecast:</b></p>
+          <section id="forecast" class="row mt-3" role="region" aria-live="polite">
+              <!-- <div class="container mt-3">
+                  <div id="forecast-flex" class="d-flex  mb-3 gap-2" >
+                      <div class="p-2 mx-5 flex-fill bg-info">Flex item 1</div>
+                      <div class="p-2 flex-fill bg-warning">Flex item 2</div>
+                      <div class="p-2 flex-fill bg-primary">Flex item 3</div>
+                  </div>
+
+              </div> -->
+
+
+          </section>
       </div>
     </div>
   </div>
 
+   
   <!-- Moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <!-- jQuery -->
